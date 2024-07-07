@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Criando variáveis para a raiz do projeto (darkMode por padrão) */
+:root {
+  --text-color: #ffffff;
+  --bg-url: url(assets/bg-mobile.jpg);
+  --bg-button-span: rgba(255,255,255,0.1);
+  --border-color:  rgba(255,255,255,0.5);
+  --bg-button-hover: rgba(255,255,255,0.05);
+  --hover-icon: rgba(255,255,255,0.2);
+  --switch-bg-url: url(assets/moon.svg);
+}
+
+/* Alteração dos valores das variáveis para o lightMode */
+.light {
+  --text-color: #000000;
+  --bg-url: url(assets/bg-mobile-light.jpg);
+  --bg-button-span: rgba(0,0,0,0.05);
+  --border-color: rgba(0,0,0,0.5) ;
+  --bg-button-hover: rgba(0,0,0,0.02);
+  --hover-icon: rgba(0,0,0,0.1);
+  --switch-bg-url: url(assets/sun.svg)
+}
+
+/* main */
+body {
+  /* declaração completa */
+
+  /* 
+  background-image: url(assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+
+  /* declaração resumida 
+  background: color image repeat position/size;
+  */
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px; /* top | right and left | bottom*/ 
+  padding: 0 24px;
+}
+
+/* profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch mode */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+  cursor: pointer;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: white var(--switch-bg-url) no-repeat center;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bg-button-span);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* links dos botões */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+
+  background: var(--bg-button-span);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: background 0.2s;
+}
+
+/*hover é um pseudo-selector*/
+ul li a:hover {
+  background: var(--bg-button-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* links dos icones de social media */
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background-color: var(--hover-icon);
+  /* border-radius: 50%;*/
+} 
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
