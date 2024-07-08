@@ -11,7 +11,7 @@
   --bg-button-span: rgba(255,255,255,0.1);
   --border-color:  rgba(255,255,255,0.5);
   --bg-button-hover: rgba(255,255,255,0.05);
-  --hover-icon: rgba(255,255,255,0.2);
+  --hover-icon-switch: rgba(255,255,255,0.2);
   --switch-bg-url: url(assets/moon.svg);
 }
 
@@ -22,7 +22,7 @@
   --bg-button-span: rgba(0,0,0,0.05);
   --border-color: rgba(0,0,0,0.5) ;
   --bg-button-hover: rgba(0,0,0,0.02);
-  --hover-icon: rgba(0,0,0,0.1);
+  --hover-icon-switch: rgba(0,0,0,0.1);
   --switch-bg-url: url(assets/sun.svg)
 }
 
@@ -94,11 +94,16 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   cursor: pointer;
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+  /* forwards mantém as últimas propriedades declaradas (nesse caso, left: 50%; */
+}
+
+#switch button:hover {
+  outline: 8px solid var(--hover-icon-switch);
 }
 
 #switch span {
@@ -163,7 +168,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background-color: var(--hover-icon);
+  background-color: var(--hover-icon-switch);
   /* border-radius: 50%;*/
 } 
 
@@ -186,5 +191,23 @@ footer {
   
 }
 
-@keyframes
+/* animação do switch */
+/* do darkmode para o lightmode */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+/* do lightmode para o darkmode */
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
 
