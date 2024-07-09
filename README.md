@@ -3,7 +3,7 @@
 
 <p><br> O DevLinks é um agregador de links, semelhante ao Link.tree, e é usado como um cartão de visitas online, agrupando inúmeros links em uma única URL. <br><br>Esse projeto foi proposto pelo curso Discover da <a href="https://www.rocketseat.com.br/">Rocketseat</a>, instruído pelo professor Mayk Brito.</p>
 
-###  <a href="https://brunacostaz.github.io/DevLinks/" id="projeto"> 🖥️ Veja o projeto pronto aqui!</a> 
+###  <a href="https://brunacostaz.github.io/DevLinks/" target="_blank"> 🖥️ Veja o projeto pronto aqui!</a> 
  <br>
  
 ## ⛏️ Tecnologias Utilizadas
