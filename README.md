@@ -8,10 +8,10 @@
  
 ## ⛏️ Tecnologias Utilizadas
 
-* HTML e CSS
-* JavaScript
-* Git e GitHub
-* Figma
+* `HTML e CSS`
+* `JavaScript`
+* `Git e GitHub`
+* `Figma`
 
 ## 🚀 Aprendizados
 
